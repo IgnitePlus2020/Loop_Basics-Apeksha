@@ -1,1 +1,1 @@
-# Contains simple looping programs and also the String assignments
+# Contains simple looping programs and also the String assignment
