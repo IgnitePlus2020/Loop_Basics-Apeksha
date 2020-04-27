@@ -34,7 +34,8 @@ public class Main {
                             break;
                     default: System.out.println("Choose a valid number");
                 }
-                System.out.println("\n\nPress Y/y to continue");
+                System.out.println("\n*-------------------------------------------------*");
+                System.out.println("Press Y/y to continue");
                 yes = in.next().charAt(0);
             } while (Character.toUpperCase(yes) == 'Y');
         }
@@ -56,11 +57,11 @@ public class Main {
             }
             members.put(dept,null);
             departments.add(dept);
-            System.out.println("*----------------------------------------------*");
+           /* System.out.println("*----------------------------------------------*");
             System.out.println("Do you wish to know if the department was added?" +
                     "\n Press Y/y to display departments ");
             choice = in.next().charAt(0);
-            if( Character.toUpperCase(choice) == 'Y')displayDepartments();
+            if( Character.toUpperCase(choice) == 'Y')displayDepartments();*/
         }
 
         public static void deleteDepartment(){
@@ -77,20 +78,20 @@ public class Main {
             }
             else
                 System.out.println("Department not in the list");
-            System.out.println("*------------------------------------------------*");
+            /*System.out.println("*------------------------------------------------*");
             System.out.println("Do you wish to know if the department was deleted?" +
                     "\n Press Y/y to display departments ");
             choice = in.next().charAt(0);
-            if( Character.toUpperCase(choice) == 'Y')displayDepartments();
+            if( Character.toUpperCase(choice) == 'Y')displayDepartments();*/
         }
 
         public static void displayMembers(){
             for(String dept : members.keySet()){
                 System.out.println("Department name: " +dept);
-                System.out.println("*-------------------------------------------*");
+                System.out.println("*----------------------------------------------------------*");
                 for(IgniteMembers member: members.get(dept))
-                    System.out.println(member.getName());
-                System.out.println("*-------------------------------------------*");
+                    System.out.println(member.toString());
+                System.out.println("*----------------------------------------------------------*");
             }
         }
 
