@@ -46,6 +46,14 @@ public class IgniteMembers {
     public void setSkillSet(Set<String> skillSet) {
             this.skillSet = skillSet;
     }
-
+    @Override
+    public String toString() {
+        return
+                "name='" + name + '\'' +
+                        ", college='" + college + '\'' +
+                        ", age=" + age +
+                        ", skillSet='" + skillSet + '\'' ;
+    }
 }
+
 
