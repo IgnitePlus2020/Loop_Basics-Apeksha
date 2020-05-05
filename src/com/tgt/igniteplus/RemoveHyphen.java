@@ -11,7 +11,7 @@ public class RemoveHyphen {
         char[] result = new char[charArrayOfString.length];
         int j = 0;
         for (int i = 0; i < string1.length(); i++)
-            if( charArrayOfString[i] == '-' && charArrayOfString[i-1] < 65 && charArrayOfString[i+1] < 65);
+            if( charArrayOfString[i] == '-' && Character.isDigit(string1.charAt(i-1)) && Character.isDigit(string1.charAt(i+1)));
             else
                 result[j++] = charArrayOfString[i];
         System.out.println(result);
